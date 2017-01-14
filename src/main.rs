@@ -49,7 +49,15 @@ impl Service for Giffetteria {
 
 	fn call(&self, request: Request) -> Self::Future {
 		let mut resp = Response::new();
-		let decoded: SlackMessage = json::decode(request.data()).unwrap();
+		let mut decoded: SlackMessage;
+		match json::decode(request.data()) {
+			Ok(msg) => decoded = msg,
+			Err(msg) => {
+				resp.body("400 Bad request");
+				resp.status_code(400, "Bad request");
+				return future::ok(resp);
+			}
+		}
 		// FIXME: curl
 		let title: String = "title".to_string();
 		let gif_url: String = "url".to_string();
