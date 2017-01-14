@@ -13,7 +13,7 @@ class SlackTestCase(unittest.TestCase):
         self.server.wait()
 
     def test_valid_slack_request(self):
-        url = 'http://127.0.0.1:8888/giffetteria'
+        url = 'http://127.0.0.1:8888/'
         data = dict(
             token='gIkuvaNzQIHg97ATvDxqgjtO',
 			team_id='T0001',
