@@ -1,11 +1,16 @@
 import unittest
+import subprocess
 import requests
 
 
 class SlackTestCase(unittest.TestCase):
     def setUp(self):
-        # FIXME: tiriamo su il server
-        pass
+        p = subprocess.Popen('./target/debug/slack-giffetteria')
+        self.server = p
+
+    def tearDown(self):
+        self.server.kill()
+        self.server.wait()
 
     def test_valid_slack_request(self):
         url = 'http://127.0.0.1:8888/giffetteria'
