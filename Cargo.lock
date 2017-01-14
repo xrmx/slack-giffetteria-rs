@@ -6,7 +6,7 @@ dependencies = [
  "futures 0.1.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-serialize 0.3.22 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio-core 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "tokio-minihttp 0.1.0 (git+https://github.com/tokio-rs/tokio-minihttp)",
+ "tokio-minihttp 0.1.0 (git+https://github.com/xrmx/tokio-minihttp?rev=d9409686b2683298e3155caaa0fefc2ac185bd1b)",
  "tokio-proto 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio-service 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -246,7 +246,7 @@ dependencies = [
 [[package]]
 name = "tokio-minihttp"
 version = "0.1.0"
-source = "git+https://github.com/tokio-rs/tokio-minihttp#753a94c138921f1962fcc8a0c38a4edcf9c0c2a6"
+source = "git+https://github.com/xrmx/tokio-minihttp?rev=d9409686b2683298e3155caaa0fefc2ac185bd1b#d9409686b2683298e3155caaa0fefc2ac185bd1b"
 dependencies = [
  "futures 0.1.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "httparse 1.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -342,7 +342,7 @@ dependencies = [
 "checksum thread_local 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)" = "8576dbbfcaef9641452d5cf0df9b0e7eeab7694956dd33bb61515fb8f18cfdd5"
 "checksum time 0.1.36 (registry+https://github.com/rust-lang/crates.io-index)" = "211b63c112206356ef1ff9b19355f43740fc3f85960c598a93d3a3d3ba7beade"
 "checksum tokio-core 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)" = "0800e9475303171ffbc79394079ef503b6d00949649799208f4fc8f1eca20892"
-"checksum tokio-minihttp 0.1.0 (git+https://github.com/tokio-rs/tokio-minihttp)" = "<none>"
+"checksum tokio-minihttp 0.1.0 (git+https://github.com/xrmx/tokio-minihttp?rev=d9409686b2683298e3155caaa0fefc2ac185bd1b)" = "<none>"
 "checksum tokio-proto 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "7c0d6031f94d78d7b4d509d4a7c5e1cdf524a17e7b08d1c188a83cf720e69808"
 "checksum tokio-service 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "24da22d077e0f15f55162bdbdc661228c1581892f52074fb242678d015b45162"
 "checksum utf8-ranges 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)" = "a1ca13c08c41c9c3e04224ed9ff80461d97e121589ff27c753a16cb10830ae0f"

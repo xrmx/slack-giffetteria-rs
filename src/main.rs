@@ -38,7 +38,7 @@ impl Service for Giffetteria {
 
 	fn call(&self, request: Request) -> Self::Future {
 		let mut resp = Response::new();
-		let decoded: SlackMessage = json::decode(request.data.as_slice()).unwrap();
+		let decoded: SlackMessage = json::decode(request.data()).unwrap();
 		// FIXME: curl
 		// FIXME: encode response
 		resp.body("");

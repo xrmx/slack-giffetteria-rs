@@ -7,7 +7,7 @@ authors = [
 ]
 
 [dependencies]
-tokio-minihttp = { git = "https://github.com/tokio-rs/tokio-minihttp" }
+tokio-minihttp = { git = "https://github.com/xrmx/tokio-minihttp", rev = "d9409686b2683298e3155caaa0fefc2ac185bd1b" }
 env_logger = "0.3.5"
 futures = "0.1.7"
 tokio-core = "0.1.0"
