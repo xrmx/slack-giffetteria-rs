@@ -28,6 +28,17 @@ struct SlackMessage {
 	response_url: String,
 }
 
+#[derive(RustcEncodable)]
+struct SlackResponseAttachments {
+	text: String
+}
+
+#[derive(RustcEncodable)]
+struct SlackResponse {
+	text: String,
+	attachments: Vec<SlackResponseAttachments>
+}
+
 struct Giffetteria;
 
 impl Service for Giffetteria {
@@ -40,8 +51,18 @@ impl Service for Giffetteria {
 		let mut resp = Response::new();
 		let decoded: SlackMessage = json::decode(request.data()).unwrap();
 		// FIXME: curl
-		// FIXME: encode response
-		resp.body("");
+		let title: String = "title".to_string();
+		let gif_url: String = "url".to_string();
+		let object = SlackResponse {
+			text: title,
+			attachments: vec![
+				SlackResponseAttachments {
+					text: gif_url
+				}
+			]
+		};
+		let encoded: String = json::encode(&object).unwrap();
+		resp.body(encoded.as_str());
 		future::ok(resp)
 	}
 }
